@@ -1,4 +1,4 @@
-package com.example.learntodoback.dto;
+package com.example.learntodoback.dto.auth;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;

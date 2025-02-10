@@ -1,7 +1,7 @@
 package com.example.learntodoback.controller;
 
-import com.example.learntodoback.dto.AuthRequestDto;
-import com.example.learntodoback.dto.RegisterRequestDto;
+import com.example.learntodoback.dto.auth.AuthRequestDto;
+import com.example.learntodoback.dto.auth.RegisterRequestDto;
 import com.example.learntodoback.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/auth")
 @RequiredArgsConstructor
 public class AuthController {
     private final AuthService authService;

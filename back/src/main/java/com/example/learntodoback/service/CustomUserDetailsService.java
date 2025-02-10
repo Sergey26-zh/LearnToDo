@@ -2,6 +2,7 @@ package com.example.learntodoback.service;
 
 import com.example.learntodoback.entity.User;
 import com.example.learntodoback.repository.UserRepository;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import org.springframework.security.core.userdetails.UserDetailsService;

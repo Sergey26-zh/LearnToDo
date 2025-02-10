@@ -1,7 +1,7 @@
 package com.example.learntodoback.service;
 
-import com.example.learntodoback.dto.AuthRequestDto;
-import com.example.learntodoback.dto.RegisterRequestDto;
+import com.example.learntodoback.dto.auth.AuthRequestDto;
+import com.example.learntodoback.dto.auth.RegisterRequestDto;
 import com.example.learntodoback.entity.User;
 import com.example.learntodoback.exception.AuthException;
 import com.example.learntodoback.repository.UserRepository;
