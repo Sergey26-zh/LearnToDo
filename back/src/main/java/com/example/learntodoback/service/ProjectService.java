@@ -60,6 +60,25 @@ public class ProjectService {
     }
 
     /**
+     * Обновление проекта для текущего пользователя.
+     */
+    @Transactional
+    public ProjectDto updateProject(Long projectId, ProjectDto projectDto) {
+        User user = userService.getCurrentUser();
+
+        Project project = projectRepository.findByIdAndUser(projectId, user)
+                .orElseThrow(() -> new BusinessException("Проект не найден"));
+
+        project.setName(projectDto.getName());
+        project.setUpdatedAt(LocalDateTime.now());
+
+        Project updatedProject = projectRepository.save(project);
+
+        return projectMapper.toDto(updatedProject);
+    }
+
+
+    /**
      * Удаление проекта по ID для текущего пользователя.
      */
     @Transactional
